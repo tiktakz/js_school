@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>랜덤색상 변경</title>
+  </head>
+  <body>
+    <h2>개발자: 김정우(201712933)</h2>
+    <h4>버튼을 클릭해서 임의의 무지개 색상으로 배경색을 변경합니다</h4>
+    <h4>색상을 추가, 삭제, 색상목록 조회 가능합니다</h4>
+    <h4>기본 3색은 삭제할 수 없습니다.</h4>
+    <button id="changeBtn">배경색 변경</button>  <button id="resets" onClick ="resetColor()">배경색 초기화</button><br />
+    <br>
+    <input type="text" id="usr_color" autofocus placeholder="추가할 색 입력(영어로)" />
+    <a href="https://www.w3schools.com/tags/ref_colornames.asp" target="blank">영어색상명 찾기(Click)</a></a><br /><br />
+    <input type="button" id="usr_color_chck" value="추가하자!" onClick="addColor()" />
+    <input type="button" id="arr_check" value="색상확인(확인용)" />
+    <input type="button" id="arr_del" value="색상 삭제!" onClick="delColor" />
+    <script src="colorChange.js"></script>
+  </body>
+</html>
