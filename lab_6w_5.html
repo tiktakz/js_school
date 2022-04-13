@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+</head>
+
+<body>
+    <div id="left_style">
+        <div id="button_style">
+        <button>개발자 : 김정우 (201712933) </button>
+        <button>공사 중</button>
+        </div>
+    </div>
+    <div id="connect_style"></div>
+
+    <div id="right_style">
+        <div id="main" >
+        <h2>Triangle</h2>
+         <input class="txtbox" type="text" id="triangle" readonly>
+         <input class="txtbox" type="text" id="triangle_message" readonly>
+        </div>
+    </div>
+
+    <script>
+        /* 개발자 : 김정우 201712933
+            날짜 : 4월 13일
+            개요 : 삼각형 구분
+        */
+
+        let side1 = prompt('첫번째 변의 길이');
+        let side2 = prompt('두번째 변의 길이');
+        let side3 = prompt('세번째 변세 길이');
+
+        function triangle_check() {
+            let triangle;
+            if (side1 == side2 && side2 == side3 && side1 == side3) {
+                triangle = "정삼각형";
+                return triangle;                
+            } else if (side1 == side2 || side1 == side3 || side2 == side3) {
+                triangle = "이등변삼각형";
+                return triangle;
+            } else {
+                triangle = "부등변삼각형";
+                return triangle;
+            }
+    }
+        //let s = `${side1} ${side2} ${side3}`;
+        document.getElementById('triangle').value = triangle_check();
+        //alert(triangle_check());
+        if (triangle_check() == "정삼각형") {
+            document.getElementById('triangle_message').value = "equilateral";
+        } else if (triangle_check() == "이등변삼각형") {
+            document.getElementById('triangle_message').value = "isosceles";
+        } else {
+            document.getElementById('triangle_message').value = "scalene";
+        }
+        
+
+    //console.log(triangle_check());
+
+;
+ ;   </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+/* 개발자: 김정우(201712933)
+    모든 페이지에 적용할 CSS */
+
+body {
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 80px;
+}
+
+/*h2:hover {
+    color: red;
+}*/
+
+input.txtbox:hover {
+    color:red;
+    transition:2s;
+}
+
+input.txtbox{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    font-size: 1.3em;
+    border-width: 10px;
+
+    /*margin-left: 50px;*/
+
+}
+
+#connect_style {
+    float: right;
+    margin-left: 14%;
+    filter: blur(20px);
+    -webkit-filter.blur(30px);
+    width: 1%;
+    position: absolute; 
+    height:100vh;
+    background-color: #8bead4;
+}
+
+#main {
+    padding-top:80px;
+}
+
+#left_style {
+    float:left; 
+    background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%);
+    width: 15%; 
+    height:100vh;
+}
+
+#right_style {
+    float:right; 
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+    width:85%; 
+    height:100vh; 
+    text-align:center; 
+    overflow-y: auto;
+}
+
+button {
+    font-size: 1.2em;
+    width:85%;
+    background-color: none;
+    border: 8px, white;
+    height: 80px;
+    border-radius: 10px;
+    color: #6654F1;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+button:active {
+    background-color: purple;
+}
+
+#button_style {
+    line-height: 100px;
+    padding-top:200px;
+    text-align: left;
+    margin-left: 5px;
+}
+

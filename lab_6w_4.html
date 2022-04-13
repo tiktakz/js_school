@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <title>Odd or Even</title>
+</head>
+
+<body>
+    <div id="left_style">
+        <div id="button_style">
+        <button>개발자 : 김정우 (201712933) </button>
+        <button>공사 중</button>
+        </div>
+    </div>
+    <div id="connect_style"></div>
+
+    <div id="right_style">
+        <div id="main" >
+        <h2>ODD or EVEN</h2>
+         <input class="txtbox" type="text" id="randomNumber" readonly>
+         <input class="txtbox" type="text" id="checker" readonly>
+        </div>
+    </div>
+
+    <script>
+        /* 개발자 : 김정우 201712933
+            날짜 : 4월 13일
+            개요 : ODD or EVEN
+        */
+
+        let number = Math.floor(Math.random() * 6) + 1;  // 1 ~ 6 생성
+        //console.log(number);
+        document.getElementById('randomNumber').value = number;
+
+        let check;
+        if (number%2 == 0) {
+            check = 'Even';
+        } else {
+            check = 'Odd';
+        }
+        document.getElementById('checker').value = check;
+
+
+
+    </script>
+</body>
+
+</html>

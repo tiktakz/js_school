@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <title>Temp Converter</title>
+</head>
+
+<body>
+    <div id="left_style">
+        <div id="button_style">
+        <button>개발자 : 김정우 (201712933) </button>
+        <button>공사 중</button>
+        </div>
+    </div>
+    <div id="connect_style"></div>
+
+    <div id="right_style">
+        <div id="main" >
+        <h2>Fahrenheit to Celsius</h2>
+        Fahrenehit : Celsius : <br> <input class="txtbox" type="text" id="farenInput" readonly>
+         <input class="txtbox" type="text" id="celsiusOutput" readonly>
+        </div>
+    </div>
+
+    <script>
+        /* 개발자 : 김정우 201712933
+            날짜 : 4월 13일
+            개요 : F -> C 변환 (오류체크)
+        */
+
+
+        let fahrenheit = prompt('화씨를 입력하세요');  //화씨값 입력받기
+        if (fahrenheit == null) {
+            alert('empty');
+        }
+
+        while (isNaN(fahrenheit) || fahrenheit == "") { // 입력값이 숫자가 아닌 경우 빈칸인 경우
+            fahrenheit = prompt('정상값을 다시 입력해주세요');
+        }
+        let celsius = 5/9*(fahrenheit-32);
+        let calc_celsius = celsius.toFixed(2);  // 2자리 올린 값을 C 저장
+
+        document.getElementById('farenInput').value = fahrenheit;
+        document.getElementById('celsiusOutput').value = calc_celsius;
+
+
+
+    </script>
+</body>
+
+</html>
