@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>개발자 : 김정우(201712933)</h2>
+    <div id="output">
+
+    </div>
+    <div id="output1"></div>
+
+    <script>
+        let userName = prompt('이름을 입력하세요');
+        let userAge = prompt('나이를 입력하세요');
+        let statement = `<p>이름은 ${userName}</p><p> 나이는 ${userAge}</p>`;
+        document.getElementById('output').innerHTML = statement;
+
+        userAge = parseInt(userAge, 10);
+        console.log(typeof(userAge));
+        userAge + 5;
+        console.log(userAge+5);
+        let statement1 = `<p> 5년 후 나이는 ${userAge}</p>`;
+        document.getElementById('output1').innerHTML = statement1;
+
+    </script>
+</body>
+</html>
