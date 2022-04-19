@@ -30,31 +30,20 @@ input.txtbox{
 
 }
 
-#connect_style {
-    float: right;
-    margin-left: 14%;
-    filter: blur(20px);
-    -webkit-filter.blur(30px);
-    width: 1%;
-    position: absolute; 
-    height:100vh;
-    background-color: #8bead4;
-}
-
 #main {
     padding-top:80px;
 }
 
 #left_style {
     float:left; 
-    background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%);
+    background-image: url("https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     width: 15%; 
     height:100vh;
 }
 
 #right_style {
     float:right; 
-    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+    background-image: url("https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     width:85%; 
     height:100vh; 
     text-align:center; 

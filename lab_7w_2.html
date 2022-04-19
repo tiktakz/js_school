@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <title>Simple Quiz</title>
+</head>
+
+<body>
+    <div id="left_style">
+        <div id="button_style">
+        <button>개발자 : 김정우 (201712933) </button>
+        <button>공사 중</button>
+        </div>
+    </div>
+    <div id="connect_style"></div>
+
+    <div id="right_style">
+        <div id="main" >
+        <h2>Simple Quiz</h2>
+        Question : Answer : <br> <input class="txtbox" type="text" id="question" readonly>
+         <input class="txtbox" type="text" id="answer" readonly>
+        </div>
+    </div>
+
+    <script>
+        /* 개발자 : 김정우 201712933
+            날짜 : 4월 19일
+            개요 : 간단한 퀴즈
+        */
+
+
+        let question = prompt('우리집 개 이름은?');  //화씨값 입력받기
+        const answer = "초롱이";
+
+        if (question == answer) {
+            document.getElementById('question').value = "우리집 개 이름은?";
+            document.getElementById('answer').value = "정답 : " + answer;
+        } else if (question == "" ) {
+            document.getElementById('answer').value = "오답";
+        }
+
+
+
+    </script>
+</body>
+
+</html>

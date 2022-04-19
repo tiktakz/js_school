@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <title>숫자 제곱의 합</title>
+</head>
+
+<body>
+    <div id="left_style">
+        <div id="button_style">
+        <button>개발자 : 김정우 (201712933) </button>
+        <button>공사 중</button>
+        </div>
+    </div>
+    <div id="connect_style"></div>
+
+    <div id="right_style">
+        <div id="main" >
+        <h2>숫자 제곱의 합</h2>
+        Number : Answer : <br> <input class="txtbox" type="text" id="number" readonly>
+         <input class="txtbox" type="text" id="answer" readonly>
+        </div>
+    </div>
+
+    <script>
+        /* 개발자 : 김정우 201712933
+            날짜 : 4월 19일
+            개요 : 숫자 제곱의 합
+        */
+
+        let sum = 0; // 총 합을 보관할 변수
+        let i = 0;
+        let userNumber = parseInt(prompt('숫자를 입력하세요'));
+
+        if (isNaN(userNumber) || userNumber <= 0) {
+            document.getElementById('number').value ='다시 입력';
+        } else{
+            for (i = 1; i<=userNumber; i++) {
+                if (i%2 == 1) {
+                    sum += i**2;
+                }
+            }
+            document.getElementById('number').value = '결과';
+            document.getElementById('answer').value = sum;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <meta charset="UTF-8">
+    <title>Triangle Assignment_2</title>
+</head>
+
+<body>
+    <div id="left_style">
+        <div id="button_style">
+        <button>개발자 : 김정우 (201712933) </button>
+        <button>공사 중</button>
+        </div>
+    </div>
+    <div id="connect_style"></div>
+
+    <div id="right_style">
+        <div id="main" >
+        <h2>Triangle</h2>
+         <input class="txtbox" type="text" id="triangle" readonly>
+         <input class="txtbox" type="text" id="triangle_message" readonly>
+        </div>
+    </div>
+
+    <script>
+        /* 개발자 : 김정우 201712933
+            날짜 : 4월 16일
+            개요 : 삼각형 구분 upgrade
+        */
+        // 다음에는 함수로 나누어보기
+        // 변수에 넣는 이유는 최대값 쉽게 구하고 변수 조건 확인
+        let sides = []; // 각 변의 길이를 담을 변수 생성
+
+        // 3번 반복 ( 변의 길이 3번 물어보기)
+        for (i=0; i<3; i++) {
+            let side = parseInt(prompt('숫자를 입력하세요'));
+            if (isNaN(side) == true) { //숫자가 아니라면 넘어간다
+                console.log('NAN');
+            } else { // 숫자이면 배열에 변의 길이 추가
+                sides.push(side);
+                //console.log(sides);
+            }
+        }
+
+        // 배열의 길이가 3이 아니면 모두 숫자가 아니라는 뜻
+        if (sides.length < 3) {
+            console.log('숫자만 입력');
+        } else { // 배열의 길이가 3이면 숫자만 들어옴
+            console.log('배열 확인');
+            console.log(sides);
+        }
+
+        // 삼각형 체크 함수
+        function triangle_check() {
+            let triangle;
+            let new_sides = sides.slice();  // 배열을 DEEP COPY 해서 새로 생성
+            let max_side = Math.max.apply(null, new_sides);  // 최대값을 구함
+            new_sides.pop(max_side);  // 최대값을 뽑아내면 나머지 두 변의 길이가 남아서 삼각형 변 길이 조건 (a+b > c)
+            //console.log('sides' + sides);
+            //console.log('newsides' + new_sides);
+            if (new_sides[0] + new_sides[1] > max_side) { // 변의 조건 확인해서 삼각형이 된다면
+                console.log('삼각형');
+                if (sides[0] == sides[1] && sides[1] == sides[2] && sides[0] == sides[2]) {
+                triangle = "정삼각형";
+                return triangle;                
+            } else if (sides[0] == sides[1] || sides[0] == sides[2] || sides[1] == sides[2]) {
+                triangle = "이등변삼각형";
+                return triangle;
+            } else {
+                triangle = "부등변삼각형";
+                return triangle;
+            }
+            } else { // 삼각형이 아니라면 ... 
+                triangle = "삼각형아님";
+                // console.log('삼각형 아님');
+                return triangle;
+            }
+    }
+        //let s = `${sides[0]} ${sides[1]} ${sides[2]}`;
+        document.getElementById('triangle').value = triangle_check();
+        //alert(triangle_check());
+        if (triangle_check() == "정삼각형") {
+            document.getElementById('triangle_message').value = "equilateral";
+        } else if (triangle_check() == "이등변삼각형") {
+            document.getElementById('triangle_message').value = "isosceles";
+        } else if (triangle_check() == "부등변삼각형") {
+            document.getElementById('triangle_message').value = "scalene";
+        } else {
+            document.getElementById('triangle_message').value = "삼각형이 아니다";
+        }
+        
+
+
+    //console.log(triangle_check());
+
+;
+ ;   </script>
+</body>
+
+</html>
