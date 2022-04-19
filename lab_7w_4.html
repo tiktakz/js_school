@@ -18,9 +18,9 @@
     <div id="right_style">
         <div id="main" >
         <h2>온도 계산</h2>
-        Fahrenheit : Celsius : <br> <input class="txtbox" type="text" id="fTemp" readonly>
-         <input class="txtbox" type="text" id="cTemp" readonly>
-         <input class="txtbox" type="text" id="counter" readonly>
+         <br><input class="txtbox" type="text" id="fTemp" readonly>
+         <input class="txtbox" type="text" id="cTemp" readonly> <input class="txtbox" type="text" id="counter" readonly>
+         
         </div>
     </div>
 
@@ -45,8 +45,8 @@
         
         msg = `Total Errors : ${counter}`; 
         
-        document.getElementById('fTemp').value = fTemp;
-        document.getElementById('cTemp').value= cTemp;
+        document.getElementById('fTemp').value = 'Fahrenheit ' + fTemp;
+        document.getElementById('cTemp').value='Celsius' + cTemp;
         document.getElementById('counter').value=msg;
         
     </script>
